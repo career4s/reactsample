@@ -1,0 +1,17 @@
+is there stuff that only class components can achieve and functional components cannot?
+Functional components in React cannot directly achieve everything that class components can. Some notable distinctions include:
+
+    No built-in concept of state or lifecycle methods: Functional components do not have direct access to state variables or lifecycle methods like componentDidMount, shouldComponentUpdate, etc., although they can manage state indirectly using React hooks like useState and useEffect1
+    2
+    .
+    Limited control over component initialization and unmounting: Functional components do not have a dedicated constructor or componentWillUnmount lifecycle method, limiting their ability to execute actions during initial mounting or cleanup upon removal1
+    2
+    .
+    Cannot act as higher-order components: Higher-order components are a pattern that wrap another component to enhance its behavior. Class components can be used as higher-order components, but functional components cannot1
+    .
+    Limited error boundary capabilities: Only class components with the getDerivedStateFromError and static getDerivedStatesFromError methods can serve as error boundaries, catching errors throughout their child components' trees. Functional components cannot become error boundaries1
+    .
+
+However, with the introduction of React hooks, functional components can mimic most behaviors of class components, including state management and lifecycle methods1
+2
+. Despite these limitations, functional components remain popular due to their simplicity, improved readability, and reduced boilerplate code
